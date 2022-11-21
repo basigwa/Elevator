@@ -1,0 +1,14 @@
+// Initialize an elevator controller with 10 floors, 3 elevators, limit 1 person
+init 10 2 1
+sleep 1
+person Person1 1 4
+person Person2 1 6
+person Person7 1 6
+person Person3 2 1
+person Person4 3 2
+person Person5 4 5
+person Person6 4 7
+
+
+sleep 4000
+quit
