@@ -24,16 +24,16 @@ namespace Elevator
 				
 				try
 				{
-					if (cmd[0] == "init")				// init {numElevs} {numFloors} 				- Initializes the ElevatorController
+					if (cmd[0] == "init")				
 					{
 						max_pass = int.Parse(cmd[2]);
 						es.Start(int.Parse(cmd[1]), int.Parse(cmd[2]));
 					}
-					else if (cmd[0] == "sleep")			// sleep {numSecs}							- sleeps this thread for numSecs
+					else if (cmd[0] == "sleep")			
 					{
 						Thread.Sleep(int.Parse(cmd[1]) * 1000);
 					}
-					else if (cmd[0] == "person")			// rider {name} {startFloor} {destFloor}	- submits a request for a rider
+					else if (cmd[0] == "person")			
 					{
 						Person rider		= new Person() { _name = cmd[1], _destFloor = int.Parse(cmd[3]) };
 						int startFloor	= int.Parse(cmd[2]);
@@ -41,13 +41,13 @@ namespace Elevator
 						ElevatorLogic.Direction dir = rider._destFloor > startFloor ? ElevatorLogic.Direction.Up : ElevatorLogic.Direction.Down;
 						es.RequestElevator(startFloor, dir);
 					}
-					else if (cmd[0] == "quit")			// quit the app
+					else if (cmd[0] == "quit")			
 					{
 						break;
 					}
 					else
 					{
-						// Ignore all other input (like comments)
+						// 
 					}
 				}
 				catch (Exception ex)
