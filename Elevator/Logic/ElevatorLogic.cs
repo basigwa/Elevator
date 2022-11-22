@@ -150,7 +150,7 @@ namespace Elevator.Logic
                     _floorsUp[Person._destFloor] = true;
                 else
                     _floorsDown[Person._destFloor] = true;
-                Console.WriteLine("{0:mm:ss} - {1}.{2}: {3} entered, chose floor {4}", DateTime.Now, _id, _currFloor, Person._name, Person._destFloor);
+                Console.WriteLine("{0:mm:ss} - {1}.{2}: {3} entered, chose floor {4} total {5} people", DateTime.Now, _id, _currFloor, Person._name, Person._destFloor, _Persons.Count);
             }
 
             _signal.Set();
