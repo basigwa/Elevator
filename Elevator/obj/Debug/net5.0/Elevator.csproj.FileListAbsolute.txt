@@ -22,7 +22,6 @@ D:\Projects\Elevator\Elevator\bin\Debug\net5.0\Elevator.runtimeconfig.dev.json
 D:\Projects\Elevator\Elevator\bin\Debug\net5.0\Elevator.dll
 D:\Projects\Elevator\Elevator\bin\Debug\net5.0\ref\Elevator.dll
 D:\Projects\Elevator\Elevator\bin\Debug\net5.0\Elevator.pdb
-D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.csproj.AssemblyReference.cache
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.AssemblyInfoInputs.cache
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.AssemblyInfo.cs
@@ -31,3 +30,4 @@ D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.dll
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\ref\Elevator.dll
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.pdb
 D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.genruntimeconfig.cache
+D:\Projects\Elevator\Elevator\obj\Debug\net5.0\Elevator.csproj.AssemblyReference.cache

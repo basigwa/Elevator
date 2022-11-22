@@ -24,16 +24,13 @@ namespace Elevator.Logic
                 m_Persons.Add(Person);
         }
 
-        // This method is called by ElevatorController when an elevator arrives at a floor.
         public void ElevatorArrived(ElevatorLogic elev, ElevatorLogic.Direction elevDir)
         {
             
             lock (m_Persons)
             {
-                // First unload Persons whose destination is this floor.
                 List<Person> unloadedPersons = elev.UnloadPersons();
 
-                // Then load Persons who are going the same direction as elevator.
                 for (int i = m_Persons.Count - 1; i >= 0; i--)
                 {
                     Person Person = m_Persons[i];

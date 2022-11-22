@@ -27,20 +27,20 @@ namespace Elevator.Logic
         public delegate void ElevatorEventHandler(ElevatorLogic elev, State state, int floor, Direction dir);
         public event ElevatorEventHandler OnElevatorEvent;
 
-        const int c_moveTimePerFloorSecs = 3;       // seconds
-        const int c_doorRemainsOpenSecs = 3;        // seconds
-        const int c_doorRemainsOpenMaxSecs = 60;        // seconds
-        const int c_doorPollIntervalMsecs = 100;        // milliseconds
+        const int c_moveTimePerFloorSecs = 3;      
+        const int c_doorRemainsOpenSecs = 3;       
+        const int c_doorRemainsOpenMaxSecs = 60;       
+        const int c_doorPollIntervalMsecs = 100;       
 
         char _id;
         int _numFloors;
         State _state;
         Direction _direction;
         int _currFloor;
-        bool[] _floorsUp;          // Which floors to visit going up
-        bool[] _floorsDown;        // Which floors to visit going down
-        bool _openDoorForce;   // The door is forced to remain open when this flag is true
-        bool _closeDoorForce;  // The door closes immediately if this flag is true
+        bool[] _floorsUp;         
+        bool[] _floorsDown;        
+        bool _openDoorForce;   
+        bool _closeDoorForce;  
         List<Person> _Persons;
 
         bool _running;
@@ -79,8 +79,6 @@ namespace Elevator.Logic
                 currFloor = _currFloor;
             }
         }
-
-        // Main thread loop
         public void Run()
         {
             _running = true;
@@ -265,7 +263,6 @@ namespace Elevator.Logic
                 return true;
         }
 
-        // Return the closest marked floor, if any.
         bool FindClosestMarkedFloor(out int closestFloor)
         {
             closestFloor = -1;
@@ -286,7 +283,6 @@ namespace Elevator.Logic
             return closestFloor != -1;
         }
 
-        // Are there any marked floors left in the current direction?
         bool RemainingFloors()
         {
             lock (_lockObj)
@@ -299,7 +295,6 @@ namespace Elevator.Logic
             return false;
         }
 
-        // Get the top/bottom marked floors.
         bool GetMarkedTopAndBottom(out int topMarked, out int bottomMarked)
         {
             bool hasMarked = false;
