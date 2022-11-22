@@ -166,7 +166,7 @@ namespace Elevator.Logic
                 {
                     if (_Persons[i]._destFloor == _currFloor)
                     {
-                        Console.WriteLine("{0:mm:ss} - {1}.{2}: {3} left", DateTime.Now, _id, _currFloor, _Persons[i]._name);
+                        Console.WriteLine("{0:mm:ss} - {1}.{2}: {3} left, remaining {4} people", DateTime.Now, _id, _currFloor, _Persons[i]._name, _Persons.Count-1);
                         unloadedPersons.Add(_Persons[i]);
                         _Persons.RemoveAt(i);
                     }
